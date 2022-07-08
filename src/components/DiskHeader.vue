@@ -24,10 +24,6 @@ header {
         display: flex;
         align-items: center;
         height: 100%;
-        img {
-            width: 100%;
-            height: auto;
-        }
     }
 }
 </style>
