@@ -1,7 +1,7 @@
 <template>
     <header>
        <div class="boxlogo">
-         <img src="#" alt="Qui logo">
+         <img src="../assets/logo-small.svg" alt="Qui logo">
        </div>
     </header>
 </template>
@@ -19,7 +19,7 @@ header {
     height: 50px;
     background-color: #2e3a46;
     .boxlogo{
-        width: 40px;
+        width: 70px;
         padding-left: 1rem;
         display: flex;
         align-items: center;

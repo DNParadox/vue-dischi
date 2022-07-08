@@ -4,9 +4,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+@import '~@fontsource/montserrat/index.css';
+@import '~@fontsource/montserrat/700.css';
 
+
+body {
+    font-family: montserrat;
+}
 
 img {
     width: 100%;
     height: auto;
+    padding-inline: 0.5rem;
+}
+
+figcaption {
+    text-align: center;
+
+}
+
+.title {
+    width: 100%;
+    font-weight: 700;
+    padding-block: 0.5rem
+}
+
+.author, .year {
+    color: #5c696f;
+    font-size: 0.8rem;
 }

@@ -2,8 +2,7 @@
    <main>
         <div class="container">
             <div class="column">
-              
-                <DiskMainComponent  v-for="element, index in component" :key="index" :musicObject="element"/>
+                <DiskMainComponent v-for="(element, index) in discArray" :key="index" :musicObject="element"/>
             </div>
         </div>
    </main>
@@ -11,15 +10,27 @@
 
 
 <script>
-import DiskMainComponent from '../components/DiskMainComponent.vue'
+import DiskMainComponent from './DiskMainComponent.vue';
+import axios from "axios";
 
 export default {
     name: 'DiskMain',
-    components: { DiskMainComponent },
+    components: { 
+        DiskMainComponent 
+    },
     data() {
         return {
-            component: DiskMainComponent
+            discArray: []
         }
+    },
+    mounted() {
+        axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+          .then(response => {
+            this.discArray = response.data.response
+        })
+          .catch(error => {
+            console.log(error)
+        })
     }
 }
 </script>
@@ -35,18 +46,9 @@ main{
     margin: 0 auto;
     .column {
         color:white;
-        padding-block: 3rem;
+        padding-block: 2rem;
         display:flex;
-        padding-inline: 0.3rem;
+        flex-wrap: wrap;
     }
-}
-figure { 
-    background-color: #2e3a46;
-}
-
-figure {
-    padding-inline: 0.3rem;
-    margin: 0.5rem;
-    
 }
 </style>
