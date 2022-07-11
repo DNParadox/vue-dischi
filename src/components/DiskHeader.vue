@@ -1,8 +1,8 @@
 <template>
     <header>
        <div class="boxlogo">
-         <img src="../assets/logo-small.svg" alt="Qui logo">
-       </div>
+         <img src="../assets/logo-small.svg" alt="Qui logo"> </div>
+      
     </header>
 </template>
 
@@ -26,4 +26,6 @@ header {
         height: 100%;
     }
 }
+
+
 </style>

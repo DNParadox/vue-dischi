@@ -1,12 +1,12 @@
 <template>
-    <div class="disc"> 
+      <div class="disc"> 
         <figure>
             <img :src="musicObject.poster" :alt="musicObject.title">
-            <figcaption class="title"> {{ musicObject.title}}</figcaption>
+            <figcaption class="title">  {{ musicObject.title}}</figcaption>
             <figcaption class="author"> {{ musicObject.author}} </figcaption>
-            <figcaption class="year">  {{ musicObject.year}} </figcaption>
+            <figcaption class="year">   {{ musicObject.year}} </figcaption>
         </figure>
-    </div>
+    </div>  
 </template>
 
 
